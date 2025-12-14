@@ -1,0 +1,723 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+}
+body {
+  background-color: black;
+  color: white;
+}
+
+.banner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("https://assets.nflxext.com/ffe/siteui/vlv3/e94073b0-a056-402f-9015-16cb1e7e45c2/web/ZA-en-20251110-TRIFECTA-perspective_3a8f40c1-e0dd-46e0-8034-e663906bf1b8_medium.jpg");
+  background-repeat: no-repeat;
+  height: calc(80 + 490);
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+.banner::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -5%;
+  transform: translateX(-50%);
+  width: 110%;
+  height: 100px;
+  border-top: 3px solid rgb(216 18 45);
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  background: black;
+  z-index: 0;
+}
+
+.button {
+  text-decoration: none;
+  color: white;
+  background: rgb(229 9 20);
+  border: 1px solid rgb(0 0 0 / 0%);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.7rem;
+}
+.button:hover {
+  cursor: pointer;
+}
+main {
+  background-color: black;
+  height: 100vh;
+  padding: 0 24px;
+}
+
+/* NAVBAR SECTION
+ */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-items: center;
+  margin: 0 24px;
+  height: 80px;
+}
+nav .sign-in {
+  height: 32px;
+  font-size: 14px;
+  padding-right: 10px;
+}
+.logo {
+  width: 89px;
+  height: 24px;
+  fill: rgb(229 9 20);
+}
+
+/* HERO SECTION
+ */
+.hero {
+  color: white;
+  padding: 0 32px 32px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 496px;
+  flex-wrap: wrap;
+}
+
+.hero h1 {
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.hero p {
+  font-size: 16px;
+  font-weight: 350;
+  margin-bottom: 16px;
+  height: 18px;
+}
+h3 {
+  font-size: 16px;
+  font-weight: 350;
+  line-height: 24px;
+}
+.form-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 16px;
+}
+
+input {
+  box-sizing: content-box;
+  width: 92%;
+  height: 24px;
+  padding: 12px 16px;
+  background-color: #111010cc;
+  opacity: 90%;
+  border: 1px solid #7a7979;
+  border-radius: 4px;
+  font-size: 16px;
+}
+.hero button {
+  margin-top: 16px;
+  padding: 8px 16px;
+  width: 10rem;
+  font-size: 18px;
+  font-weight: 400;
+  height: 48px;
+  line-height: 18px;
+}
+button span {
+  margin-left: 10px;
+}
+
+/* TRENDING SECTION
+ */
+.trending-now {
+  margin-top: 30px;
+  margin-bottom: 35px;
+}
+h2 {
+  color: white;
+  font-size: 18px;
+  font-weight: 450;
+}
+
+.trending-movies {
+  position: relative;
+  display: flex;
+  width: 100%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  align-items: center;
+}
+
+.trending-now ul {
+  list-style-type: none;
+  display: flex;
+  overflow: hidden;
+  gap: 20px;
+  padding: 24px;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  flex: 1;
+}
+
+.trending-now li {
+  position: relative;
+}
+.trending-now img {
+  width: 112px;
+  border-radius: 8px;
+}
+.trending-now .img-1::before {
+  content: "1";
+  color: black;
+  font-size: 64px;
+  -webkit-text-stroke: 2px white;
+  font-weight: 700;
+  line-height: 64px;
+  height: 64px;
+  position: absolute;
+  bottom: 4px;
+  left: -10px;
+  z-index: 2;
+}
+.trending-now .img-2::before {
+  content: "2";
+  color: black;
+  font-size: 64px;
+  -webkit-text-stroke: 2px white;
+  font-weight: 700;
+  line-height: 64px;
+  height: 64px;
+  position: absolute;
+  bottom: 4px;
+  left: -10px;
+  z-index: 2;
+}
+.trending-now .img-3::before {
+  content: "3";
+  color: black;
+  font-size: 64px;
+  -webkit-text-stroke: 2px white;
+  font-weight: 700;
+  line-height: 64px;
+  height: 64px;
+  position: absolute;
+  bottom: 4px;
+  left: -10px;
+  z-index: 2;
+}
+.trending-now .img-4::before {
+  content: "4";
+  color: black;
+  font-size: 64px;
+  -webkit-text-stroke: 2px white;
+  font-weight: 700;
+  line-height: 64px;
+  height: 64px;
+  position: absolute;
+  bottom: 4px;
+  left: -10px;
+  z-index: 2;
+}
+.trending-now .img-5::before {
+  content: "5";
+  color: black;
+  font-size: 64px;
+  -webkit-text-stroke: 2px white;
+  font-weight: 700;
+  line-height: 64px;
+  height: 64px;
+  position: absolute;
+  bottom: 4px;
+  left: -10px;
+  z-index: 2;
+}
+.trending-now .img-6::before {
+  content: "6";
+  color: black;
+  font-size: 64px;
+  -webkit-text-stroke: 2px white;
+  font-weight: 700;
+  line-height: 64px;
+  height: 64px;
+  position: absolute;
+  bottom: 4px;
+  left: -10px;
+  z-index: 2;
+}
+.trending-now .img-7::before {
+  content: "7";
+  color: black;
+  font-size: 64px;
+  -webkit-text-stroke: 2px white;
+  font-weight: 700;
+  line-height: 64px;
+  height: 64px;
+  position: absolute;
+  bottom: 4px;
+  left: -10px;
+  z-index: 2;
+}
+.trending-now .img-8::before {
+  content: "8";
+  color: black;
+  font-size: 64px;
+  -webkit-text-stroke: 2px white;
+  font-weight: 700;
+  line-height: 64px;
+  height: 64px;
+  position: absolute;
+  bottom: 4px;
+  left: -10px;
+  z-index: 2;
+}
+.trending-now .img-9::before {
+  content: "9";
+  color: black;
+  font-size: 64px;
+  -webkit-text-stroke: 2px white;
+  font-weight: 700;
+  line-height: 64px;
+  height: 64px;
+  position: absolute;
+  bottom: 4px;
+  left: -10px;
+  z-index: 2;
+}
+.trending-now .img-10::before {
+  content: "10";
+  color: black;
+  font-size: 64px;
+  -webkit-text-stroke: 2px white;
+  font-weight: 700;
+  line-height: 64px;
+  height: 64px;
+  position: absolute;
+  bottom: 4px;
+  left: -10px;
+  z-index: 2;
+}
+.carousel-btn {
+  width: 24px;
+  height: 120px;
+  background-color: #2e2e2e;
+  border-radius: 8px;
+  color: white;
+  border: none;
+  padding: 3px;
+}
+.carousel-btn span {
+  margin: 0;
+  text-align: center;
+}
+
+/* CARD SECTION
+ */
+.reason-cards {
+  margin-bottom: 56px;
+}
+.card {
+  background-image: linear-gradient(to right, #192145, #210f19);
+  margin-top: 8px;
+  padding: 24px 16px 80px;
+  border-radius: 12px;
+  height: 185px;
+  position: relative;
+}
+.card h1 {
+  font-size: 20px;
+  font-weight: 500;
+}
+.card p {
+  margin-top: 8px;
+  color: #aaaab5;
+  font-size: 15px;
+  font-weight: 4000;
+}
+.card .icon-img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+/* FAQ SECTION
+ */
+.faq-section {
+  margin-bottom: 56px;
+}
+.questions {
+  margin-top: 16px;
+  font-size: 18px;
+  font-weight: 350;
+}
+.questions details {
+  background-color: #2d2d2d;
+  margin-bottom: 8px;
+}
+.questions summary {
+  width: 100%;
+  border-bottom: 1px solid black;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+}
+.questions summary:hover {
+  cursor: pointer;
+  background-color: #474747;
+}
+details > p {
+  padding: 24px;
+}
+
+/* REGISTER SECTION
+ */
+.register {
+  margin-bottom: 56px;
+}
+.register .form-input {
+  width: 100%;
+  display: flex;
+  align-items: start;
+}
+.register button {
+  margin-top: 16px;
+  padding: 8px 16px;
+  width: 10rem;
+  font-size: 18px;
+  font-weight: 400;
+  height: 48px;
+  line-height: 18px;
+}
+.register span {
+  margin-left: 10px;
+}
+
+/* FOOTER SECTION */
+footer {
+  color: #b3b3b3;
+}
+footer h3 {
+  color: #b3b3b3;
+  font-size: 16px;
+  font-weight: 450;
+}
+footer h3 span {
+  text-decoration: underline;
+}
+footer h3 span:hover {
+  cursor: pointer;
+}
+footer ul {
+  margin: 36px 0;
+  list-style-type: none;
+  text-decoration: underline;
+}
+
+footer li {
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+footer li:hover {
+  cursor: pointer;
+}
+footer .netflix-sa {
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 50px;
+}
+footer .last-sentence {
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+  font-weight: 400;
+  margin-top: 36px;
+  color: #8b9280;
+  margin-bottom: 16px;
+}
+footer .end {
+  height: 60px;
+}
+
+/* FOR TABLET
+ */
+@media (max-width: 1279px) and (min-width: 960px) {
+  nav {
+    padding: 0 calc(80px - 24px);
+  }
+  nav .logo {
+    height: 40px;
+    width: 148px;
+  }
+  .hero {
+    margin: 0 194px;
+    text-align: center;
+    height: 660px;
+  }
+  .hero h1 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 50px;
+  }
+  .hero p {
+    margin-bottom: 24px;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .form-input {
+    display: flex;
+    flex-direction: row;
+    height: 72px;
+    font-size: 16px;
+  }
+  .form-input input {
+    width: 60%;
+    margin-right: 8px;
+    height: 32px;
+  }
+  .form-input button {
+    margin: 0;
+    height: 56px;
+  }
+  main {
+    padding: 0 80px;
+  }
+  .trending-now {
+    margin: -5px 0 5px;
+  }
+  h2,
+  details {
+    font-size: 24px;
+    font-weight: 400;
+  }
+  .trending-now ul {
+    gap: 44px;
+  }
+  .trending-now img {
+    width: 140px;
+  }
+  .reason-cards h2 {
+    margin: 20px 0 20px;
+  }
+  .cards {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .card {
+    flex: 0 0 calc(50% - 12px);
+    padding: 24px;
+    height: 209px;
+    margin-top: 0px;
+  }
+  .questions summary {
+    height: 84px;
+  }
+  .register form {
+    text-align: center;
+    margin-top: 80px;
+  }
+  footer ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+  }
+  footer .last-sentence {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+/* FOR LAPTOP/DESKTOP
+ */
+@media (max-width: 1680px) and (min-width: 1280px) {
+  nav {
+    padding: 0 calc(148px - 24px);
+  }
+  nav .logo {
+    height: 40px;
+    width: 148px;
+  }
+  .hero {
+    margin: 0 314px;
+    text-align: center;
+    height: 760px;
+  }
+  .hero h1 {
+    font-size: 56px;
+    font-weight: 900;
+    line-height: 70px;
+  }
+  .hero p {
+    margin-bottom: 24px;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .form-input {
+    display: flex;
+    flex-direction: row;
+    height: 72px;
+    font-size: 16px;
+  }
+  .form-input input {
+    width: 60%;
+    margin-right: 8px;
+    height: 32px;
+  }
+  .form-input button {
+    margin: 0;
+    height: 56px;
+  }
+  main {
+    padding: 0 148px;
+  }
+  .trending-now {
+    margin: -5px 0 5px;
+  }
+  h2,
+  details {
+    font-size: 24px;
+    font-weight: 400;
+  }
+  .trending-now ul {
+    gap: 44px;
+  }
+  .trending-now img {
+    width: 180px;
+  }
+  .reason-cards h2 {
+    margin: 20px 0 20px;
+  }
+  .cards {
+    display: flex;
+    gap: 16px;
+  }
+  .card {
+    flex: 0 0 calc(25% - 16px);
+    padding: 24px;
+    height: 302px;
+    margin-top: 0px;
+    border-radius: 16px;
+  }
+  .questions summary {
+    height: 84px;
+  }
+  .register form {
+    text-align: center;
+    margin-top: 80px;
+  }
+  footer ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, auto);
+  }
+  footer .last-sentence {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+/* LARGER SCREENS
+ */
+@media (min-width: 1681px) {
+  nav {
+    padding: 0 calc(148px - 24px);
+  }
+  nav .logo {
+    height: 40px;
+    width: 148px;
+  }
+  .hero {
+    margin: 0 575.5px;
+    text-align: center;
+    height: 91vh;
+  }
+  .hero h1 {
+    font-size: 56px;
+    font-weight: 900;
+    line-height: 70px;
+  }
+  .hero p {
+    margin-bottom: 24px;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .form-input {
+    display: flex;
+    flex-direction: row;
+    height: 72px;
+    font-size: 16px;
+  }
+  .form-input input {
+    width: 20vw;
+    margin-right: 8px;
+    height: 32px;
+  }
+  .form-input button {
+    margin: 0;
+    height: 56px;
+  }
+  main {
+    padding: 0 148px;
+  }
+  .trending-now {
+    margin: -5px 0 5px;
+  }
+  h2,
+  details {
+    font-size: 24px;
+    font-weight: 400;
+  }
+  .trending-now ul {
+    gap: 44px;
+  }
+  .trending-now img {
+    width: 180px;
+  }
+  .reason-cards h2 {
+    margin: 20px 0 20px;
+  }
+  .cards {
+    display: flex;
+    gap: 16px;
+  }
+  .card {
+    flex: 0 0 calc(25% - 16px);
+    padding: 24px;
+    height: 250px;
+    margin-top: 0px;
+    border-radius: 16px;
+  }
+  .questions summary {
+    height: 84px;
+  }
+  .register form {
+    text-align: center;
+    margin-top: 80px;
+  }
+  footer ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, auto);
+  }
+  footer .last-sentence {
+    display: flex;
+    flex-direction: row;
+  }
+}
