@@ -351,6 +351,70 @@ h2 {
   bottom: 0;
 }
 
+/* VIDEO SECTION */
+.tv-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100%;
+  margin: auto;
+}
+
+.tv-text {
+  flex: 1;
+  margin-right: 1rem;
+}
+
+.tv-text h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.tv-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.tv-wrapper {
+  flex: 1;
+  position: relative;
+  max-width: 500px;
+}
+
+.tv-video {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  width: 90%;
+  height: 50%;
+  object-fit: cover;
+  z-index: 1;
+  border-radius: 4px;
+}
+
+.tv-svg {
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 2;
+}
+.tv-svg svg {
+  stroke-width: 0.1;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .tv-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .tv-text h2 {
+    font-size: 1.8rem;
+  }
+}
+
 /* FAQ SECTION
  */
 .faq-section {
@@ -657,6 +721,9 @@ footer .end {
     font-size: 16px;
     font-weight: 400;
   }
+  .hero .form-input input {
+    width: 19vw;
+  }
 
   .form-input {
     display: flex;
@@ -665,7 +732,7 @@ footer .end {
     font-size: 16px;
   }
   .form-input input {
-    width: 20vw;
+    width: 30vw;
     margin-right: 8px;
     height: 32px;
   }
@@ -703,6 +770,9 @@ footer .end {
     height: 250px;
     margin-top: 0px;
     border-radius: 16px;
+  }
+  .card p {
+    font-size: 16px;
   }
   .questions summary {
     height: 84px;
